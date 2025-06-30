@@ -6,13 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Enums\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\qtec.shared\qtec.shared.csproj" />
-  </ItemGroup>
-
 </Project>

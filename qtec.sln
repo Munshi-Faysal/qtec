@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qtec.infrastructure", "qtec.infrastructure\qtec.infrastructure.csproj", "{134E0E79-7894-44C0-95C8-09BA07E23620}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qtec.application", "qtec.application\qtec.application.csproj", "{2EF7A8EA-A2FF-4B56-B7F8-CBC1C2B7E32B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qtec.api", "qtec.api\qtec.api.csproj", "{EB357013-7EA4-40FE-B8C0-71B6FFCAFA1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qtec.shared", "qtec.shared\qtec.shared.csproj", "{18639161-2FC8-4523-9790-FDAD48A74512}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EB357013-7EA4-40FE-B8C0-71B6FFCAFA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB357013-7EA4-40FE-B8C0-71B6FFCAFA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB357013-7EA4-40FE-B8C0-71B6FFCAFA1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18639161-2FC8-4523-9790-FDAD48A74512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18639161-2FC8-4523-9790-FDAD48A74512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18639161-2FC8-4523-9790-FDAD48A74512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18639161-2FC8-4523-9790-FDAD48A74512}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
