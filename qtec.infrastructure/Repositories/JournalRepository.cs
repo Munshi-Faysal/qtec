@@ -22,11 +22,8 @@ namespace qtec.infrastructure.Repositories
         public async Task<int> CreateJournalAsync(TblJournal journal)
         {
             try
-            {
-
-                
-
-                _context.Journals.Add(journal);
+            {            
+               _context.Journals.Add(journal);
                 await _context.SaveChangesAsync();
                 return journal.Id;
             }
