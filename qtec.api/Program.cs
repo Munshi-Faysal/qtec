@@ -23,9 +23,23 @@ builder.Services.AddDbContext<QtecDbContext>(options =>
 
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
-    builder.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader()
+    builder.WithOrigins("http://localhost:5173", "https://qtec-front.vercel.app").AllowAnyMethod().AllowAnyHeader()
             .AllowCredentials();
 }));
+
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("corsapp", policy =>
+//    {
+//        policy
+//            .SetIsOriginAllowed(origin => true) // allow all origins dynamically
+//            .AllowAnyMethod()
+//            .AllowAnyHeader()
+//            .AllowCredentials();
+//    });
+//});
+
 
 builder.Services.AddMediatR(typeof(GetAccountsQueryHandler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
@@ -33,14 +47,27 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+
+
+
 
 app.UseHttpsRedirection();
 app.UseCors("corsapp");
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Qtec API V1");
+    //if (app.Environment.IsProduction())
+    //{
+    //    c.RoutePrefix = string.Empty;
+    //}
+});
+
 app.UseAuthorization();
 
 app.MapControllers();
